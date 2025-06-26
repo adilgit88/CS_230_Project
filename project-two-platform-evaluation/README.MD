@@ -1,120 +1,136 @@
+# Draw It or Lose It – Software Design DocumentAdd commentMore actions
 
-# Draw It or Lose It – Web Game (CS 230 Project One)
+## Overview
 
-![image](https://github.com/user-attachments/assets/be8fd8fb-43e2-43d8-af9a-e23085fbdb0b)
+This repository contains the full software design document for **Draw It or Lose It**, a cross-platform game developed for The Gaming Room as part of the CS 230 Software Design and Engineering course at Southern New Hampshire University. The purpose of this project is to reimagine the original Android-only game as a scalable, secure, and efficient web-based application using industry-standard design patterns and architecture principles.
+
+## Project Summary
+
+- **Course**: CS 230 - Software Design and Engineering  
+- **Project Name**: Draw It or Lose It  
+- **Author**: Adil Patel  
+- **Version**: 2.0  
+- **Last Updated**: June 12, 2025  
+
+## Contents
+
+- Software Design Document (PDF)
+- UML Diagram
+- Evaluation and Recommendations
+- System Architecture Overview
+- Platform Analysis (Linux, Mac, Windows, Mobile)
+- Design Patterns: Singleton, Iterator
+
+## Technologies & Tools Used
 
 
-> A multi-platform, web-based re-imagining of *Draw It or Lose It*, built for **The Gaming Room** by **Creative Technology Solutions (CTS)**.
 
----
+- **Languages**: Java  
+- **Design Patterns**: Singleton, Iterator  
+- **Development Tools**: IntelliJ IDEA, Eclipse, Android Studio, Xcode  
+- **Hosting Platform**: Linux (recommended)  
+- **Web Servers**: Apache, Nginx  
+- **Client Communication**: REST API, WebSockets  
+- **Cloud Storage**: Amazon S3 or Azure Storage (recommended)  
 
-## 📜 Executive Summary
-This repository contains the first working prototype and supporting design documents for migrating *Draw It or Lose It* from a single-platform Android app to a distributed, browser-accessible game.  
-Key goals:
+## Key Features
 
-- **Single-Instance Game Service** – guarantee one live game in memory via the *Singleton* pattern.  
-- **Unique Names** – prevent duplicate game, team, or player names using the *Iterator* pattern.  
-- **Extensible Domain Model** – share common fields (`id`, `name`) through a base `Entity` class.
 
----
 
-## ✨ Features
-| Requirement | Implementation |
-|-------------|----------------|
-| Multiple teams per game | `Game` holds a `List<Team>` |
-| Multiple players per team | `Team` holds a `List<Player>` |
-| Unique names & IDs | Checked in `GameService.add*()` |
-| One service instance only | Private constructor & static `getInstance()` |
-| Future-proof web deployment | Clean separation of model / service / driver layers |
 
----
 
-## 🏗️ Tech Stack
-- **Language:** Java 17
-- **Build:** Eclipse 2023-09 (or any Gradle/Maven IDE)
-- **Testing:** JUnit 5 (starter tests included)
-- **Documentation:** UML class diagram (`/docs/DrawItOrLoseIt_UML.png`)
 
----
 
-## 🔎 Design Patterns Used
-| Pattern | Class(es) | Purpose |
-|---------|-----------|---------|
-| Singleton | `GameService` | Ensure only one game controller lives in memory |
-| Iterator | `GameService.addGame/getGame` & `addTeam/addPlayer` | Traverse existing objects to enforce name uniqueness |
-| Inheritance | `Entity` → `Game`, `Team`, `Player` | Share common identity fields & behaviour |
 
----
+- Supports multiple teams and players
+- Ensures uniqueness of game, team, and player names
+- Designed for distributed web-based environments
+- Scalable and maintainable architecture
+- Enforced single game instance using Singleton pattern
 
-## 🌳 Project Structure
-```
+## Reflection
 
-.
-├── README.md
-├── docs/
-│   └── DrawItOrLoseIt\_UML.png
-└── src/
-├── main/java/com/cts/drawit/
-│   ├── model/
-│   │   ├── Entity.java
-│   │   ├── Game.java
-│   │   ├── Team.java
-│   │   └── Player.java
-│   ├── service/
-│   │   └── GameService.java
-│   └── ProgramDriver.java
-└── test/java/com/cts/drawit/
-└── GameServiceTest.java
 
-````
 
----
 
-## 🚀 Getting Started
 
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/YourOrg/draw-it-or-lose-it.git
-   cd draw-it-or-lose-it
-````
+1. **What did you set out to accomplish?**  
+   I aimed to design a robust, scalable, and secure software architecture to transition "Draw It or Lose It" from an Android app to a web-based, cross-platform solution.
 
-2. **Import into Eclipse**
-   *File → Import → Existing Gradle Project* (or *Maven* if you converted the build).
-3. **Run the driver**
-   `ProgramDriver` contains a `main()` with sample data. Hit ▶️ to verify console output.
+2. **What did you learn from this project?**  
+   I deepened my understanding of system architecture, design patterns like Singleton and Iterator, and the importance of platform selection for deployment and development.
 
----
 
-## 🧪 Running Tests
 
-```bash
-./gradlew test     # or: mvn test
-```
 
-Unit tests cover singleton instantiation and uniqueness constraints.
 
----
+3. **What would you do differently next time?**  
+   I would start earlier with platform testing to account for browser compatibility issues and invest more time in integrating CI/CD and automated testing strategies.
 
-## 📐 UML
 
-See `/docs/DrawItOrLoseIt_UML.png` for the full domain model. It highlights:
 
-* Association between `Game` ↔ `Team` ↔ `Player`
-* Inheritance from `Entity`
-* Static factories in `GameService`
 
----
 
-## 🌍 Deployment Next Steps
 
-| Layer            | Milestone                       | Notes                                        |
-| ---------------- | ------------------------------- | -------------------------------------------- |
-| **Presentation** | React / Thymeleaf web UI        | Consume REST API                             |
-| **Service**      | Spring Boot REST controllers    | Expose `GameService` methods                 |
-| **Persistence**  | JPA / Hibernate                 | Store entities in SQL                        |
-| **Hosting**      | AWS Elastic Beanstalk or Heroku | Meets client “serve multiple platforms” goal |
 
----
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
