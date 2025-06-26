@@ -53,10 +53,5 @@ This repository contains the full software design document for **Draw It or Lose
 4. **What does this project demonstrate about you as a software developer?**  
    It demonstrates my ability to analyze technical requirements, apply software design principles, and communicate my ideas through professional documentation.
 
-## License
-
-This project is for academic purposes and is not licensed for commercial use.
-
----
 
 
