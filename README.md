@@ -9,14 +9,14 @@ The client required expanding their Android-only drawing game, *Draw It or Lose 
 
 ## 📁 Repository Structure
 
-| Module | Folder/File | Description |
-|--------|-------------|-------------|
-|Module 1| [`/project-one-game-service/`](./project-one-game-service/)| Java implementation using **Singleton** and **Iterator** design patterns |
-|Module 1| [`project-two-platform-evaluation/`](.project-two-platform-evaluation/) | Evaluation of Linux, Mac, Windows, iOS, and Android as platforms |
-|Module 1| [`project-three-architecture-recommendations/`](./project-three-architecture-recommendations/) | Final recommendations on OS architecture, memory, storage, networking, and security |
-|Module 1| [`auth-simulation/`](./auth-simulation/) | Minimal runnable BasicAuth REST API (Dropwizard) from Module 4 |
-|Module 1| [`journals/`](./journals/) | All journal entries, including final portfolio reflection (Module 8) |
-|Module 1| [`software-design-document/`](./software-design-document/) | Final combined **Software Design Document (SDD)** in Word/PDF format |
+| Folder/File | Description |
+|-------------|-------------|
+[`/project-one-game-service/`](./project-one-game-service/)| Java implementation using **Singleton** and **Iterator** design patterns |
+[`project-two-platform-evaluation/`](.project-two-platform-evaluation/) | Evaluation of Linux, Mac, Windows, iOS, and Android as platforms |
+[`project-three-architecture-recommendations/`](./project-three-architecture-recommendations/) | Final recommendations on OS architecture, memory, storage, networking, and security |
+[`auth-simulation/`](./auth-simulation/) | Minimal runnable BasicAuth REST API (Dropwizard) from Module 4 |
+[`journals/`](./journals/) | All journal entries, including final portfolio reflection (Module 8) |
+[`software-design-document/`](./software-design-document/) | Final combined **Software Design Document (SDD)** in Word/PDF format |
 
 ---
 
