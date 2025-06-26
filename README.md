@@ -11,8 +11,8 @@ The client required expanding their Android-only drawing game, *Draw It or Lose 
 
 | Folder/File | Description |
 |-------------|-------------|
-[Project One – Game Creator](./project-one-game-creator/)
-./project-one-game-service/
+[Project One – Game Creator](./project-one-game-service/)
+
 | `project-one-game-service/` | Java implementation using **Singleton** and **Iterator** design patterns |
 | `project-two-platform-evaluation/` | Evaluation of Linux, Mac, Windows, iOS, and Android as platforms |
 | `project-three-architecture-recommendations/` | Final recommendations on OS architecture, memory, storage, networking, and security |
